@@ -1,29 +1,31 @@
-<h1 id="tableLabel">Orders List</h1>
-
-<p>This component demonstrates fetching data from the server.</p>
-
-<p *ngIf="!orders"><em>Loading...</em></p>
-
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="orders">
-    <thead>
-        <tr>
-            <th>Order Number</th>
-            <th>Customer Name</th>
-            <th>Customer Address</th>
-            <th>Total Cost</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let order of orders">
-            <td>{{ order.id }}</td>
-            <td>{{ order.customerName }}</td>
-            <td>{{ order.customerAddress }}</td>
-            <td>{{ order.totalCost }}</td>
-            <td>{{ order.statusName }}</td>
-        </tr>
-    </tbody>
-</table>
+<main>
+    <div class="orders-box">
+        <div class="orders-box-titles">
+            <p>Orders</p>
+            <button>New Order</button>
+        </div>
+        <table class='orders-table'>
+            <thead>
+                <tr>
+                    <th>Order Number</th>
+                    <th>Customer Name</th>
+                    <th>Customer Address</th>
+                    <th>Total Cost</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders">
+                    <td><a href="#">{{ order.id }}</a></td>
+                    <td>{{ order.customerName }}</td>
+                    <td>{{ order.customerAddress }}</td>
+                    <td>{{ order.totalCost }}</td>
+                    <td>{{ order.statusName }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
 
 <!-- New section to display the detailed order with ID = 1
 <h2 *ngIf="orderDetail">Order Detail for ID = 1</h2>
