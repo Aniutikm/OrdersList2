@@ -1,0 +1,54 @@
+<h1 id="tableLabel">Orders List</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!orders"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="orders">
+    <thead>
+        <tr>
+            <th>Order Number</th>
+            <th>Customer Name</th>
+            <th>Customer Address</th>
+            <th>Total Cost</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orders">
+            <td>{{ order.id }}</td>
+            <td>{{ order.customerName }}</td>
+            <td>{{ order.customerAddress }}</td>
+            <td>{{ order.totalCost }}</td>
+            <td>{{ order.statusName }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- New section to display the detailed order with ID = 1
+<h2 *ngIf="orderDetail">Order Detail for ID = 1</h2>
+<div *ngIf="orderDetail">
+  <p>Order Number: {{ orderDetail.orderNumber }}</p>
+  <p>Order Date: {{ orderDetail.orderDate }}</p>
+  <p>Customer ID: {{ orderDetail.customerId }}</p>
+  <p>Customer Name: {{ orderDetail.customerName }}</p>
+  <p>Status ID: {{ orderDetail.statusId }}</p>
+  <p>Status Name: {{ orderDetail.statusName }}</p>
+  <p>Total Cost: {{ orderDetail.totalCost }}</p>
+
+  <h3>Products:</h3>
+  <ul>
+    <li *ngFor="let product of orderDetail.products">
+      Product ID: {{ product.productId }},
+      Product Name: {{ product.productName }},
+      Category ID: {{ product.productCategoryId }},
+      Category Name: {{ product.productCategoryName }},
+      Size ID: {{ product.productSizeId }},
+      Size Name: {{ product.productSizeName }},
+      Quantity: {{ product.quantity }},
+      Price: {{ product.price }},
+      Comment: {{ product.comment }}
+    </li>
+  </ul>
+</div>
+    -->

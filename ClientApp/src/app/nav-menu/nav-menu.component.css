@@ -1,0 +1,46 @@
+header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 40px;
+  font-style: italic;
+  padding-left: 2%;
+}
+
+h5 {
+  padding-left: 7%;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.header-buttons {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+  .header-buttons button {
+    padding: 15px 40px;
+    background-color: #CCCCCC;
+    border: 2px solid #666666;
+    border-radius: 5px;
+    font-size: 25px;
+    width: 31%;
+  }
+
+    .header-buttons button:last-of-type {
+      background-color: #B3B3B3;
+    }
+
+    .header-buttons button:hover,
+    :active {
+      background-color: white;
+      cursor: pointer;
+    }
