@@ -2,7 +2,7 @@
     <div class="orders-box">
         <div class="orders-box-titles">
             <p>Orders</p>
-            <button>New Order</button>
+            <button [routerLink]="['/new-order']">New Order</button>
         </div>
         <table class='orders-table'>
             <thead>
@@ -27,30 +27,3 @@
     </div>
 </main>
 
-<!-- New section to display the detailed order with ID = 1
-<h2 *ngIf="orderDetail">Order Detail for ID = 1</h2>
-<div *ngIf="orderDetail">
-  <p>Order Number: {{ orderDetail.orderNumber }}</p>
-  <p>Order Date: {{ orderDetail.orderDate }}</p>
-  <p>Customer ID: {{ orderDetail.customerId }}</p>
-  <p>Customer Name: {{ orderDetail.customerName }}</p>
-  <p>Status ID: {{ orderDetail.statusId }}</p>
-  <p>Status Name: {{ orderDetail.statusName }}</p>
-  <p>Total Cost: {{ orderDetail.totalCost }}</p>
-
-  <h3>Products:</h3>
-  <ul>
-    <li *ngFor="let product of orderDetail.products">
-      Product ID: {{ product.productId }},
-      Product Name: {{ product.productName }},
-      Category ID: {{ product.productCategoryId }},
-      Category Name: {{ product.productCategoryName }},
-      Size ID: {{ product.productSizeId }},
-      Size Name: {{ product.productSizeName }},
-      Quantity: {{ product.quantity }},
-      Price: {{ product.price }},
-      Comment: {{ product.comment }}
-    </li>
-  </ul>
-</div>
-    -->

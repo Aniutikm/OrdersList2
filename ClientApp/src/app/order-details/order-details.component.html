@@ -1,0 +1,26 @@
+
+<h2 *ngIf="orderDetail">Order Detail for ID = 1</h2>
+<div *ngIf="orderDetail">
+  <p>Order Number: {{ orderDetail.orderNumber }}</p>
+  <p>Order Date: {{ orderDetail.orderDate }}</p>
+  <p>Customer ID: {{ orderDetail.customerId }}</p>
+  <p>Customer Name: {{ orderDetail.customerName }}</p>
+  <p>Status ID: {{ orderDetail.statusId }}</p>
+  <p>Status Name: {{ orderDetail.statusName }}</p>
+  <p>Total Cost: {{ orderDetail.totalCost }}</p>
+
+  <h3>Products:</h3>
+  <ul>
+    <li *ngFor="let product of orderDetail.products">
+      Product ID: {{ product.productId }},
+      Product Name: {{ product.productName }},
+      Category ID: {{ product.productCategoryId }},
+      Category Name: {{ product.productCategoryName }},
+      Size ID: {{ product.productSizeId }},
+      Size Name: {{ product.productSizeName }},
+      Quantity: {{ product.quantity }},
+      Price: {{ product.price }},
+      Comment: {{ product.comment }}
+    </li>
+  </ul>
+</div>
